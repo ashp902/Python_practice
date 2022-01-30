@@ -1,11 +1,11 @@
-str = "avinash bharath"
+str = "avinash bharath bcd"
 #avinash,bharath
 for word in str.split() :
-    try:
-        i = word.index('i')
-    except:
-        print(word)
-        continue
+    i = -1
+    for x in range(len(word)) :
+        if(word[x] == 'a') :
+            i = x
+            break
     if(i % 2 == 0) :
         print(word[::-1])
     else :
